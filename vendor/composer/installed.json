@@ -1,0 +1,97 @@
+[
+    {
+        "name": "php-activerecord/php-activerecord",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jpfuentes2/php-activerecord.git",
+            "reference": "d4b980f02bd31d33526d26bc3e228bf9170dff14"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jpfuentes2/php-activerecord/zipball/d4b980f02bd31d33526d26bc3e228bf9170dff14",
+            "reference": "d4b980f02bd31d33526d26bc3e228bf9170dff14",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "pear/log": "~1.12",
+            "pear/pear_exception": "1.0-beta1",
+            "phpunit/phpunit": "3.7.*"
+        },
+        "time": "2016-04-23 22:54:43",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "ActiveRecord.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "php-activerecord is an open source ORM library based on the ActiveRecord pattern.",
+        "homepage": "http://www.phpactiverecord.org/",
+        "keywords": [
+            "activerecord",
+            "orm"
+        ]
+    },
+    {
+        "name": "twitter/bootstrap",
+        "version": "v4.0.0-alpha.2",
+        "version_normalized": "4.0.0.0-alpha2",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/twbs/bootstrap.git",
+            "reference": "48938155eb24b4ccdde09426066869504c6dab3c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twbs/bootstrap/zipball/48938155eb24b4ccdde09426066869504c6dab3c",
+            "reference": "48938155eb24b4ccdde09426066869504c6dab3c",
+            "shasum": ""
+        },
+        "replace": {
+            "twitter/bootstrap": "self.version"
+        },
+        "time": "2015-12-08 17:51:50",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.3.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jacob Thornton",
+                "email": "jacobthornton@gmail.com"
+            },
+            {
+                "name": "Mark Otto",
+                "email": "markdotto@gmail.com"
+            }
+        ],
+        "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+        "homepage": "http://getbootstrap.com",
+        "keywords": [
+            "JS",
+            "css",
+            "framework",
+            "front-end",
+            "mobile-first",
+            "responsive",
+            "sass",
+            "web"
+        ]
+    }
+]

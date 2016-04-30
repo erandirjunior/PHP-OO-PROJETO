@@ -1,0 +1,11 @@
+{
+    "require": {
+        "php-activerecord/php-activerecord": "dev-master",
+        "twitter/bootstrap":"v4.0.0-alpha.2"
+    },
+    "autoload": {
+    	"psr-4" : {
+    		"app\\classes\\": ["app/classes", "app/models"]
+    	}
+    }
+}
