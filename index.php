@@ -1,54 +1,40 @@
 <?php  
 require_once 'config.php';
-
 // Cadastrar
 if(isset($_POST['cadastrar'])):
-
 	// Pegar os campos do formulario
 	$titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_STRING);
 	$texto  = filter_input(INPUT_POST, 'texto', FILTER_SANITIZE_MAGIC_QUOTES);
-
 	// Cadastro no banco
 	$post = new \app\models\Post();
 	$attributes = [
 		'post_titulo' => $titulo,
 		'post_conteudo' => $texto
 	];
-
 	$cadastrar = $post->cadastrar($attributes);
 	if($cadastrar):
 		$msg = "Sucesso ao cadastrar";
 	else:
 		$msg = "Erro ao cadastrar";
 	endif;
-
 endif;
-
-
 if(isset($_GET['ac'])):
-
 	// Deleta do banco
 	if ($_GET['ac'] == 'del'):
-
 	$id = (int) $_GET['id'];
 	$post = new \app\models\Post();
 	$post->deletar($id);
-
 	// Atualiza o dado
 	elseif ($_GET['ac'] == 'at'):
-
 		$id = (int) $_GET['id'];
 		$post = new \app\models\Post();
 		$postEncontrado = $post->pegarPeloId('post_id', $id);
-
 		$titulo_update = $postEncontrado->post_titulo;
 		$texto_update = $postEncontrado->post_conteudo;
-
 		if(isset($_POST['atualizar'])):
 			
 			$titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_STRING);
 			$texto  = filter_input(INPUT_POST, 'texto', FILTER_SANITIZE_MAGIC_QUOTES);
-
 			$attributes = [
 				'post_titulo' => $titulo,
 				'post_conteudo' => $texto
@@ -56,11 +42,8 @@ if(isset($_GET['ac'])):
 			$post->atualizar($id, $attributes);
 			
 		endif;
-
 	endif;
-
 endif;
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -87,14 +70,10 @@ endif;
 	</form>
 	<?php 
 	echo isset($msg) ? $msg : '';
-
-
 	// Exibindo os dados do Banco de dados
 	$posts = new \app\models\Post();
 	$postsCadastrados = $posts->listar();
-
 	$posts = new ArrayIterator($postsCadastrados);
-
 	while($posts->valid()):
 	?>
 
